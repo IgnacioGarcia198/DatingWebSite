@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Dating Web Site</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link type="text/css" rel="stylesheet" href="CSS/datingws.css">
+    </head>
+    <body>
+        <div id="dataInputForm">
+        <h1>Please Enter Your Details For Our Dating Web Site!</h1>
+        <form action="">
+            <fieldset>
+                <legend>Your Face</legend>
+                <label for="userImg">Your image:</label> <input type="file" name="userImg"> <span id="fileName"></span><br>
+                Image preview: <div id="imgPreview"></div>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Your General Details</legend>
+                <label for="userName">Name:</label> <input type="text" name="userName"><br>
+                <label for="userGender">Gender:</label> 
+                <input type="radio" name="userGender" value="male">Male
+                <input type="radio" name="userGender" value="female">Female<br>
+                <label for="userAge">Age:</label> <input type="number" name="userAge"><br>
+                <label for="userdob">Date of birth:</label> <input type="date" name="userdob"><br>
+                <label for="userColor">Favorite color:</label> <input type="color" name="userColor"><br>
+                <label for="userCountry">Country:</label> 
+                <select name="userCountry">
+                    <option>Spain</option>
+                    <option>Ireland</option>
+                    <option>Japan</option>
+                    <option>China</option>
+                    <option>Finland</option>
+                    <option>Poland</option>
+                    <option>Norway</option>
+                    <option>Greece</option>   
+                </select> 
+            </fieldset>
+            
+            <fieldset>
+                <legend>Your Indicators</legend>
+                <label for="userHeight">Height:</label> <span class="rangeEnd">Short</span> <input type="range" min="0" max="3.00" step="0.01" value="1.60" name="userHeight"> <span class="rangeEnd">Tall</span><br>
+                <label for="userMoney">Salary:</label> <span class="rangeEnd">Poor</span> <input type="range" min="0" max="200000" step="50" value="20000" name="userMoney"> <span class="rangeEnd">Rich</span>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Your Contact Information</legend>
+                <label for="userMail">Email:</label> <input type="email" name="userMail"><br>
+                <label for="userTelf">Mobile:</label> <input type="tel" name="userTelf"><br>
+                <label for="userAddress">Address:</label><br>
+                <textarea name="userAddress" rows="4" cols="40"></textarea>
+            </fieldset>
+        </form>
+        </div>
+    </body>
+</html>
