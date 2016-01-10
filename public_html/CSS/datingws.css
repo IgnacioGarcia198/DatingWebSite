@@ -30,16 +30,8 @@ td.aligntop {
     vertical-align: top;
 }
 
-input:hover {
-    font-size: 1.2em;
-}
-
 td.label {
     text-align: right;
-}
-
-table.formTable td:hover {
-    font-size: 1.2em;
 }
 
 tr td:first-child {
@@ -49,6 +41,14 @@ tr td:first-child {
 .rangeEnd {
     background-color: maroon;
     color: white;
+}
+
+input:hover {
+    font-size: 1.2em;
+}
+
+table.formTable td:hover {
+    font-size: 1.2em;
 }
 
 .grow:hover {
