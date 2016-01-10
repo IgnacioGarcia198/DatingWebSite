@@ -17,46 +17,106 @@ and open the template in the editor.
         <form action="">
             <fieldset>
                 <legend>Your Face</legend>
-                <label for="userImg">Your image:</label> <input type="file" name="userImg"> <span id="fileName"></span><br>
-                Image preview: <div id="imgPreview"></div>
+                <table class="formTable">
+                    <tr>
+                        <td class="label"><label for="userImg">Your image:</label></td>
+                        <td><input type="file" id="fileInput" name="userImg" accept="image/*" onchange="readURL(this);" required></td>
+                    </tr>
+                    <tr>
+                        <td class="label aligntop">Image preview:</td>
+                        <td><img id="imgPreview" alt="Your image" src="#"></td>
+                    </tr>
+                </table>
             </fieldset>
             
             <fieldset>
                 <legend>Your General Details</legend>
-                <label for="userName">Name:</label> <input type="text" name="userName"><br>
-                <label for="userGender">Gender:</label> 
-                <input type="radio" name="userGender" value="male">Male
-                <input type="radio" name="userGender" value="female">Female<br>
-                <label for="userAge">Age:</label> <input type="number" name="userAge"><br>
-                <label for="userdob">Date of birth:</label> <input type="date" name="userdob"><br>
-                <label for="userColor">Favorite color:</label> <input type="color" name="userColor"><br>
-                <label for="userCountry">Country:</label> 
-                <select name="userCountry">
-                    <option>Spain</option>
-                    <option>Ireland</option>
-                    <option>Japan</option>
-                    <option>China</option>
-                    <option>Finland</option>
-                    <option>Poland</option>
-                    <option>Norway</option>
-                    <option>Greece</option>   
-                </select> 
+                <table class="formTable">
+                    <tr>
+                        <td class="label"><label for="userName">Name:</label></td>
+                        <td><input type="text" name="userName" placeholder="Your full name" required></td>
+                    </tr>
+                    <tr>
+                        <td class="label"><label for="userGender">Gender:</label></td>
+                        <td><input type="radio" name="userGender" value="male" checked required>Male <input type="radio" name="userGender" value="female" required>Female</td>
+                    </tr>
+                    <tr>
+                        <td class="label"><label for="userAge">Age:</label></td>
+                        <td><input type="number" name="userAge" value="18" required></td>
+                    </tr>
+                    <tr>
+                        <td class="label"><label for="userdob">Date of birth:</label></td>
+                        <td><input type="date" name="userdob"></td>
+                    </tr>
+                    <tr>
+                        <td class="label"><label for="userColor">Favorite color:</label></td>
+                        <td><input type="color" name="userColor"></td>
+                    </tr>
+                    <tr>
+                        <td class="label"><label for="userCountry">Country:</label></td>
+                        <td>
+                            <select name="userCountry" class="grow">
+                                <option>Spain</option>
+                                <option>Ireland</option>
+                                <option>Japan</option>
+                                <option>China</option>
+                                <option>Finland</option>
+                                <option>Poland</option>
+                                <option>Norway</option>
+                                <option>Greece</option>   
+                            </select>
+                        </td>
+                    </tr>
+                </table>
             </fieldset>
             
             <fieldset>
                 <legend>Your Indicators</legend>
-                <label for="userHeight">Height:</label> <span class="rangeEnd">Short</span> <input type="range" min="0" max="3.00" step="0.01" value="1.60" name="userHeight"> <span class="rangeEnd">Tall</span><br>
-                <label for="userMoney">Salary:</label> <span class="rangeEnd">Poor</span> <input type="range" min="0" max="200000" step="50" value="20000" name="userMoney"> <span class="rangeEnd">Rich</span>
+                <table class="formTable">
+                    <tr>
+                        <td class="label"><label for="userHeight">Height:</label></td>
+                        <td><span class="rangeEnd">Short</span></td>
+                        <td><input type="range" min="0" max="3.00" step="0.01" value="1.60" name="userHeight"></td>
+                        <td><span class="rangeEnd">Tall</span><br></td>
+                    </tr>
+                    <tr>
+                        <td class="label"><label for="userMoney">Salary:</label></td> 
+                        <td><span class="rangeEnd">Poor</span></td>
+                        <td><input type="range" min="0" max="200000" step="50" value="20000" name="userMoney"></td>
+                        <td><span class="rangeEnd">Rich</span></td>
+                    </tr>
+                </table>   
             </fieldset>
-            
+                        
             <fieldset>
                 <legend>Your Contact Information</legend>
-                <label for="userMail">Email:</label> <input type="email" name="userMail"><br>
-                <label for="userTelf">Mobile:</label> <input type="tel" name="userTelf"><br>
-                <label for="userAddress">Address:</label><br>
-                <textarea name="userAddress" rows="4" cols="40"></textarea>
-            </fieldset>
+                <table class="formTable">
+                    <tr>
+                        <td class="label"><label for="userMail">Email:</label></td>
+                        <td><input type="email" name="userMail" required></td>
+                    </tr>
+                    <tr>
+                        <td class="label"><label for="userTelf">Mobile:</label></td>
+                        <td><input type="tel" name="userTelf"></td>
+                    </tr>
+                    <tr>
+                        <td class="label aligntop"><label for="userAddress">Address:</label></td>
+                        <td><textarea name="userAddress" class="grow" rows="4" cols="40"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td class="label"><label for="contactMethod">Method to contact you:</label></td>
+                        <td>
+                            <input type="checkbox" name="contactMethod" value="email"> Email
+                            <input type="checkbox" name="contactMethod" value="whatsapp"> Whatsapp
+                            <input type="checkbox" name="contactMethod" value="chat"> In-app chat
+                        </td>
+                    </tr>
+                </table>
+            </fieldset><br>
+            <input type="submit" value="Submit">
         </form>
         </div>
+        
+        <script type="text/javascript" src="JavaScript/datingws.js"></script>
     </body>
 </html>
