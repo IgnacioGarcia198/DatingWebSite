@@ -43,7 +43,19 @@ and open the template in the editor.
             .rangeEnd {
                 background-color: maroon;
                 color: white;
-            }       
+            }  
+            
+            input:hover {
+                font-size: 1.2em;
+            }
+
+            table.formTable td:hover {
+                font-size: 1.2em;
+            }
+
+            .grow:hover {
+                font-size: 1.2em;
+            }
         </style>
     </head>
     <body>
@@ -151,5 +163,20 @@ and open the template in the editor.
             <input type="submit" value="Submit">
         </form>
         </div>
+        <script>
+            function readURL(input) {
+                var imgpreview = document.getElementById("imgPreview");
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        //alert(e.target.result);
+                        imgpreview.setAttribute("src", e.target.result);
+                        imgpreview.setAttribute("width", 150);
+                        imgpreview.setAttribute("height", 200);
+                    };
+                    reader.readAsDataURL(input.files[0]);
+                }
+            }
+        </script>
     </body>
 </html>
